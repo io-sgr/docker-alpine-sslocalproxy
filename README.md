@@ -22,3 +22,4 @@ docker run -d \
     -v <some_path>/ss-client.json:/etc/shadowsocks-libev/config.json \
     sgrio/alpine-sslocalproxy
 ```
+3. Now you have a HTTP proxy listening at port **8118** and a SOCKS proxy listening at port **1080**, go configure your browser with any of it.
