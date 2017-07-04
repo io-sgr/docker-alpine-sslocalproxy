@@ -21,4 +21,4 @@ RUN set -ex && \
 
 HEALTHCHECK --interval=10s --timeout=5s --retries=10 CMD curl -x http://127.0.0.1:8118 https://www.google.com/gen_204 || exit 1
 
-CMD privoxy /etc/privoxy/config && ss-local --fast-open -c /etc/shadowsocks-libev/config.json
+CMD privoxy /etc/privoxy/config && ss-local -b 0.0.0.0 -u --fast-open -c /etc/shadowsocks-libev/config.json
