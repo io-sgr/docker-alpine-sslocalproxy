@@ -3,6 +3,8 @@ MAINTAINER SgrAlpha <admin@mail.sgr.io>
 
 EXPOSE 1080 8118
 
+USER root
+
 RUN set -ex && \
 	apk --update add --no-cache \
 		curl \
